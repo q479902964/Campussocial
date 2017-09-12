@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">校 园</string>
+    <color name="clr_normal">#FFFFFF</color>
+    <color name="clr_pressed">#99E5FE</color>
+</resources>

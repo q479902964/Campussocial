@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="campus">
+        <item>广东外语外贸大学</item>
+        <item>广东工业大学</item>
+        <item>华南理工大学</item>
+    </string-array>
+    <string-array name="institutes">
+    <item>信息学院</item>
+    <item>艺术学院 </item>
+    <item>经贸学院</item>
+</string-array>
+    <string-array name="major">
+        <item>软件工程</item>
+        <item>计算机科学与技术学院</item>
+        <item>网络工程</item>
+        <item>电子商务</item>
+        <item>信息管理</item>
+    </string-array>
+    <string-array name="classification">
+        <item>学术</item>
+        <item>生活</item>
+    </string-array>
+    <style name="Text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
