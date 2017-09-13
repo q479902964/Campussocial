@@ -134,8 +134,8 @@ public class Utility {
         return null;
     }
     public static List<Message> handleChatResponse(String response){
-        List<Message> chatlist = new ArrayList<>();
         try {
+            List<Message> chatlist = new ArrayList<>();
             JSONArray jsonArray = new JSONArray(response);
             for(int i = 0;i<jsonArray.length();i++){
              JSONObject jsonObject =jsonArray.getJSONObject(i);
@@ -148,7 +148,7 @@ public class Utility {
                 message.setContent(chatcontent);
                 message.setUsericon(usericon);
                 message.setTime(chattime);
-                chatlist.add(message);
+                chatlist.add(0,message);
             }
             return chatlist;
         } catch (JSONException e) {

@@ -3,6 +3,7 @@ package com.example.huwei.campussocial.Util;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.IBinder;
@@ -54,6 +55,26 @@ public class AutoUpdateService extends Service {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
+                Log.i("fail","great");
+                SharedPreferences prefs = getSharedPreferences("new", Context.MODE_MULTI_PROCESS);
+                SharedPreferences.Editor editor = prefs.edit();
+//                editor.putString("new_message"," [\n" +
+//                        "        {\n" +
+//                        "            \"title\": \"Google\",\n" +
+//                        "            \"time\": \"18:20\",\n" +
+//                        "            \"content\": \"你好\",\n" +
+//                        "            \"usericon\": \"http://bpic.588ku.com/back_pic/02/67/58/81578e331cc7693.jpg\"\n" +
+//                        "        },\n" +
+//                        "        {\n" +
+//                        "            \"title\": \"lj\",\n" +
+//                        "            \"time\": \"18:20\",\n" +
+//                        "            \"content\": \"你好\",\n" +
+//                        "            \"usericon\": \"http://bpic.588ku.com/back_pic/02/67/58/81578e331cc7693.jpg\"\n" +
+//                        "        }\n" +
+//                        "    ]\n"
+//                        );
+                editor.putString("new_message",null);
+                editor.apply();
             }
 
             @Override

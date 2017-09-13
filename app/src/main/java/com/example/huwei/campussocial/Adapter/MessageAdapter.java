@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.huwei.campussocial.R;
 import com.example.huwei.campussocial.bean.Message;
-import com.example.huwei.campussocial.bean.Postings;
 
 import java.util.List;
 
@@ -27,11 +26,13 @@ public class MessageAdapter  extends ArrayAdapter<Message> {
         resourceid = textViewResourceId;
     }
 
+
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Message mes = getItem(position);
         convertView = LayoutInflater.from(getContext()).inflate(resourceid,parent,false);
+
         ImageView UserIcon = (ImageView) convertView.findViewById(R.id.usericon);
         TextView Content = (TextView) convertView.findViewById(R.id.message_content);
         TextView  Title = (TextView) convertView.findViewById(R.id.message_title);
